@@ -59,5 +59,5 @@ Este repositório será atualizado continuamente conforme novas habilidades fore
 
 ## Contato
 
-📧 **E-mail:** [seuemail@email.com](joao.lucas.devsql@gmail.com)
-💼 **LinkedIn:** [Meu LinkedIn](www.linkedin.com/in/joao-lucas-devsql)
+📧 **E-mail:**[joao.lucas.devsql@gmail.com]
+💼 **LinkedIn:**[www.linkedin.com/in/joao-lucas-devsql]
