@@ -25,20 +25,26 @@ O projeto tem como objetivo praticar a criação de dashboards, indicadores, vis
 
 ### 02 — Dashboard de Carros
 
-**Ferramenta:** Power BI
+**Ferramenta: Power BI**
 
-Segundo projeto desenvolvido durante o curso, utilizando dados fornecidos pelo próprio curso através de um **arquivo Excel**.
+Segundo projeto desenvolvido durante o curso, utilizando dados fornecidos pelo próprio curso através de um arquivo Excel.
 
-O projeto tem como objetivo continuar praticando a análise e visualização de dados no Power BI, aplicando os conceitos aprendidos ao longo do curso.
+O projeto teve como objetivo aprofundar a prática com Power BI, trabalhando não apenas com a construção do dashboard, mas também com a organização dos dados, relacionamentos entre tabelas, medidas e recursos de análise.
 
 **Conceitos praticados:**
 
-* Importação de dados do Excel
+* Importação de dados a partir de arquivo Excel
 * Tratamento e organização dos dados
-* Criação de visualizações
-* Indicadores
-* Análise de dados
-* Construção de dashboards
+* Combinação de dados utilizando Inner Join e Left Join
+* Construção e utilização de relacionamentos entre tabelas
+* Criação de medidas para análise dos dados
+* Criação de indicadores, como faturamento, quantidade de clientes e médias
+* Utilização de hierarquia de datas para análise temporal
+* Criação de gráficos e visualizações
+* Utilização de linha de tendência
+* Criação de previsão de dados (Forecast)
+* Utilização de intervalo de confiança de 95% na previsão
+* Construção e organização de dashboards
 
 ---
 
