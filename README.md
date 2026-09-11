@@ -1,6 +1,10 @@
-# Estudos e Projetos — Power BI e SQL
+## Estudos e Projetos — Power BI e SQL
 
-Repositório destinado ao registro dos projetos desenvolvidos durante meus estudos de **Power BI e SQL**, acompanhando minha evolução na área de Dados.
+Repositório destinado ao registro dos projetos desenvolvidos durante meus estudos no curso de Power BI e SQL da Udemy, acompanhando minha evolução e prática na área de Dados.
+
+Os projetos apresentados aqui utilizam dados e propostas de exercícios fornecidos pelo próprio curso, sendo utilizados como parte do meu processo de aprendizado e desenvolvimento de habilidades em Power BI, Power Query, DAX e SQL.
+
+O objetivo deste repositório é documentar minha evolução ao longo do curso, registrar os conceitos aprendidos e demonstrar, de forma progressiva, minha prática com ferramentas voltadas para a área de Dados.
 
 ## Projetos
 
