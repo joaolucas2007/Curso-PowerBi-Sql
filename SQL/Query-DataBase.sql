@@ -58,3 +58,22 @@ Select TOTAL_USUARIOS As AcessoTotal, TIPO_DE_CONTA As Conta,  VALOR As ValorVen
 From Table_Flix
 Where TOTAL_USUARIOS IN ('8480','997')
 GO
+
+
+--Aprendendo Funções de agregação Count
+Select	Count(UF)
+From Table_Flix
+Go
+--Contando a quantidade distinta 
+Select	Count(Distinct UF)
+From Table_Flix
+Go
+--Usando Sum para somar total ganho
+Select Sum(VALOR) As TotalGanho
+From Table_Flix
+Go
+
+
+--Usando replace para substituir valores de uma coluna
+Select TOTAL_USUARIOS,REPLACE(PERIODO_DE_ACESSOS, 'Manha', 'primeiroAcessos') As PeriodoAcesso , Segmentos 
+From Table_Flix
