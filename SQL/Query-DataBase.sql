@@ -40,3 +40,21 @@ Where Segmentos = 'AÇÃO'
 And Uf = 'RJ'
 And PERIODO_DE_ACESSOS = 'MANHA'
 Go
+
+
+--Usando Between para filtrar os dados 
+Select * From Table_Flix
+Where Data Between '2019/01/01' And '2019/01/19'
+Go
+
+--Usando o IN
+
+Select * From Table_Flix
+Where DATA In ('2019/01/01' , '2019/01/15')
+Go
+
+--Resolvendo exercicios da aula
+Select TOTAL_USUARIOS As AcessoTotal, TIPO_DE_CONTA As Conta,  VALOR As ValorVenda, ESTADOS As Locais
+From Table_Flix
+Where TOTAL_USUARIOS IN ('8480','997')
+GO
