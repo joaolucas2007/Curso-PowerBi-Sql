@@ -55,3 +55,5 @@ Where Vendedor = 'ugb' And Quantidade > 2
 Go
 --usando o commit 
 Commit
+
+Begin Tran
