@@ -12,13 +12,13 @@ Go
 
 --Criando uma tabela temporario 
 Select * 
-Into Relatorioltz
+Into #Relatorioltz
 From tb_vendas
 Where VENDEDOR = 'LTZ'
 Go
 
 --Puxando dados da tabela temporaria
-Select * From Relatorioltz
+Select * From #Relatorioltz
 Go
 
 --Criação de tabelas Fisicas com Select
@@ -52,3 +52,45 @@ Go
 --Puxando dados da tabela fisica Criada
 Select * From RelatorioFinal
 Go
+
+
+--Criando tabelas virtuais usando tabela fisica
+
+--Criando a tabela virtual 
+Create Table RelatorioNovo 
+(
+Loja int,
+Cupom Int,
+Data Date,
+IdCliente VarChar(255),
+Vendedor VarChar (255),
+Quantidade Int,
+ValorVenda Decimal(18,2),
+ValorPago Decimal(18,2),
+ValorCancelado Decimal(18,2)
+)
+--Insetindo dados na table
+Insert Into RelatorioNovo
+--Fonte de onde vem os dados
+Select
+Loja,
+Cupom ,
+Data ,
+cod_cliente ,
+Vendedor ,
+Quantidade ,
+Valor_Venda, 
+Valor_Pago,
+Valor_Cancelado 
+From tb_Vendas
+
+--Selecionando dados da tabela virtual criada
+Select * From RelatorioNovo
+
+--Criação de views
+Create View VwRelatorio AS 
+Select * From RelatorioNovo
+Where VENDEDOR = 'Vin'
+Go
+
+Select * From VwRelatorio
