@@ -123,3 +123,32 @@ Go
 --Selecionando dados da view criada
 Select * From RelatorioCliente
 Go
+--Criando uma tabel virtual com a nova base
+Create Table TesteCliente 
+(
+  Nome VarChar(255),
+  IdCliente VarChar(255),
+  Endereco VarChar(255) Default 'Não Cadastrado',
+  Cpf VarChar (30),
+  Cidade VarChar(100),
+  TipoCliente tinyInt
+)
+-- Inserindo dados
+Insert Into TesteCliente
+
+--fonte dos dados inseridos
+Select Nome,COD_CLI, Endereco, Cpf, Cidade, Tipo_de_Cliente 
+From BaseCliente
+Go
+--Selecionando os dados da tabela virtual
+Select * From TesteCliente
+Go
+--Criando o view apartir da tabela virtual
+Create View RelatorioTesteCliente As
+Select Nome, IdCliente, Endereco, Cpf, Cidade, TipoCliente
+From TesteCliente
+Go
+
+--Puxando os dados da view criada
+Select * From RelatorioTesteCliente
+Go
