@@ -94,3 +94,32 @@ Where VENDEDOR = 'Vin'
 Go
 
 Select * From VwRelatorio
+--Subindo outra base de dados
+
+--Tratando os dados 
+--Rtrim tira os espaços a direita
+Select Rtrim(NOME)			As Nome,
+Rtrim(COD_CLI)				As Cliente,
+Rtrim(ENDERECO) 				As Endereco,
+Rtrim(CPF) 					As Cpf,
+Rtrim(CIDADE) 					As Cidade,
+Rtrim(TIPO_DE_CLIENTE) 			As TipoCliente
+From BaseCliente
+Go
+
+
+--Criando view RelatorioCliente
+
+Create View RelatorioCliente As
+Select Rtrim(NOME)			As Nome,
+Rtrim(COD_CLI)				As Cliente,
+Rtrim(ENDERECO) 				As Endereco,
+Rtrim(CPF) 					As Cpf,
+Rtrim(CIDADE) 					As Cidade,
+Rtrim(TIPO_DE_CLIENTE) 			As TipoCliente
+From BaseCliente
+Go
+
+--Selecionando dados da view criada
+Select * From RelatorioCliente
+Go
