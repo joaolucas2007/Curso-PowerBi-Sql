@@ -35,3 +35,23 @@ Commit
 Select * From TabelaVendas
 
 --Update com RollBack
+Begin Tran
+Update TabelaVendas
+Set Vendedor = 'Luiz Torrez'
+Where Vendedor = 'ltz'
+Go
+--Usando rollBack para cancelar a atualização
+RollBack
+
+--Fazendo update com 2 condições
+Select * From TabelaVendas
+Where Vendedor = 'ugb' And Quantidade > 2
+Go
+
+Begin Tran 
+Update TabelaVendas
+Set Vendedor = 'Umberto'
+Where Vendedor = 'ugb' And Quantidade > 2
+Go
+--usando o commit 
+Commit
