@@ -108,3 +108,47 @@ Create Procedure BuscaTransacoes
 	End
 Go
 Exec BuscaTransacoes @Cliente = 'Cliente 2', @Ano = 2023 -- Aqui passamos o cliente e o ano que queremos
+
+
+--Criando procedure com IF 
+Create Procedure MonitoramentoSituacao
+@Cliente VarChar(20)
+As
+	Begin	
+	    --Verificando se o cliente tem transação aprovada
+		If Exists (Select 1 From BaseFraudes 
+					Where Cliente = @Cliente And
+					Aprovado = 'Sim')
+	
+
+	Begin --Verificando se o cliente possui Aprovação transaçãoes suspeitas (Valor Auto, A Noite)
+		
+		If Exists (Select 1 From BaseFraudes
+					Where Cliente = @Cliente And
+					Aprovado = 'Sim' And
+					ValorTransacao >= 4000 And
+					DatePart(Hour, DataTransacao) >= 21) --pega a hora da transação
+
+	Begin --Retornando as transações suspeitas
+	Select DataTransacao, Cliente, TipoTransacao, ValorTransacao, Bandeira, Aprovado, 'Transação suspeita' As Verificar
+	From BaseFraudes
+	Where Cliente = @Cliente And
+	Aprovado = 'Sim' And
+	ValorTransacao >= 4000 And
+	DatePart(Hour, DataTransacao) >= 21
+	End
+
+		Else
+			Begin --Caso tenha aprovação e nenhuma suspeita
+				Select 'Cliente não possui transação suspeita' As Mensagem
+			End
+		End
+		Else 
+			Begin  --Caso não tenha nenhuma trnasação
+		 Select DataTransacao, Cliente, TipoTransacao, ValorTransacao, Bandeira, Aprovado, 'Sem transação' As Verificar From BaseFraudes
+		 Where Cliente = @Cliente
+		 And Aprovado = 'Não'
+			End
+		End
+--Executando a procedure
+Exec MonitoramentoSituacao @Cliente = 'Cliente 7'
