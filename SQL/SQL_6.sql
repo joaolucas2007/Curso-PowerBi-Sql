@@ -58,3 +58,17 @@ Exec ImportJson
 
 --Selecionando os dados
 Select * From Transacoes
+
+--Exercicios Criada as Function
+
+
+Create Function FN_Saudacao (@nome NVarChar(100))
+Returns NVarChar(100)
+As 
+	Begin 
+		Return 'Olá' + @nome
+	End
+Go
+Select ValorTransacao,  dbo.FN_Saudacao(Cliente) As Saudacao From Transacoes
+
+
