@@ -171,3 +171,32 @@ As
 Go
 Exec ClassificacaoTransacao
 
+--5 Ultima Procedure
+Create Procedure RelatorioCriotico
+As
+	Begin 
+		Select DataTransacao, Cliente, TipoTransacao, ValorTransacao, Bandeira, Aprovado, 'Transação Suspeita'As TipoTransacao From BaseFraudes
+	Where Datepart(hour, DataTransacao) >= 23 And
+	ValorTransacao >= 4000 And
+	Bandeira = 'Amex'
+	End
+Go
+Exec RelatorioCriotico
+
+--Repetindo a mesma procedure porém com variavel
+
+--5 Ultima Procedure
+Create Procedure RelatorioCriotico_02
+@Cliente VarChar(20)
+As
+	Begin 
+		Select DataTransacao, Cliente, TipoTransacao, ValorTransacao, Bandeira, Aprovado, 'Transação Suspeita'As TipoTransacao From BaseFraudes
+	Where 
+	Cliente =  @Cliente And
+	Datepart(hour, DataTransacao) >= 23 And
+	ValorTransacao >= 4000 And
+	Bandeira = 'Amex'
+	End
+Go
+Exec RelatorioCriotico_02 @Cliente = 'Cliente 8'
+Go
