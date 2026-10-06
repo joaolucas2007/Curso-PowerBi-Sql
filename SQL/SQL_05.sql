@@ -152,3 +152,22 @@ As
 		End
 --Executando a procedure
 Exec MonitoramentoSituacao @Cliente = 'Cliente 7'
+
+
+
+-- 4 Procedure Lista Transações Classificadas
+Create Procedure ClassificacaoTransacao
+As 
+	Begin
+		Select Cliente, ValorTransacao,
+		Case 
+		When ValorTransacao < 100 Then 'Valor Abaixo'
+		When ValorTransacao Between 100 And 900 Then 'Valor Medio'
+		Else 'Valor Acima'  
+		End As TipoValor
+		From BaseFraudes
+		Order By Cliente asc
+	End
+Go
+Exec ClassificacaoTransacao
+
