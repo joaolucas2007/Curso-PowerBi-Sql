@@ -1,73 +1,91 @@
-## Estudos e Projetos — Power BI e SQL
+# Estudos e Projetos — Power BI e SQL
 
-Repositório destinado ao registro dos projetos desenvolvidos durante meus estudos no curso de Power BI e SQL da Udemy, acompanhando minha evolução e prática na área de Dados.
+Repositório destinado ao registro dos projetos desenvolvidos durante meus estudos no curso de Power BI e SQL da Udemy.
 
-Os projetos apresentados aqui utilizam dados e propostas de exercícios fornecidos pelo próprio curso, sendo utilizados como parte do meu processo de aprendizado e desenvolvimento de habilidades em Power BI, Power Query, DAX e SQL.
+Os projetos utilizam dados e propostas de exercícios fornecidos pelo próprio curso e fazem parte do meu processo de aprendizado e desenvolvimento de habilidades na área de Dados.
 
-O objetivo deste repositório é documentar minha evolução ao longo do curso, registrar os conceitos aprendidos e demonstrar, de forma progressiva, minha prática com ferramentas voltadas para a área de Dados.
-
-## Projetos
-
-### 01 — Dashboard de Recursos Humanos
-
-**Ferramenta:** Power BI
-
-Dashboard desenvolvido durante o curso de Power BI, utilizando dados fornecidos pelo próprio curso através de um **arquivo Excel**.
-
-O projeto tem como objetivo praticar a criação de dashboards, indicadores, visualizações e os primeiros conceitos de **DAX** no Power BI.
-
-**Conceitos praticados:**
-
-* Importação de dados do Excel
-* Tratamento e organização dos dados
-* Criação de indicadores
-* Visualizações no Power BI
-* Medidas em DAX
-* Construção e organização de dashboards
+Ao longo dos estudos, pratiquei conceitos relacionados a análise, tratamento, modelagem e consulta de dados utilizando Power BI, Power Query, DAX e SQL Server.
 
 ---
 
-### 02 — Dashboard de Carros
+## Power BI
 
-**Ferramenta: Power BI**
+Durante os estudos, pratiquei:
 
-Segundo projeto desenvolvido durante o curso, utilizando dados fornecidos pelo próprio curso através de um arquivo Excel.
+- Importação de dados a partir de arquivos Excel e outras fontes
+- Tratamento, limpeza e organização de dados
+- Transformação de dados utilizando Power Query
+- Combinação de tabelas utilizando Inner Join e Left Join
+- Criação e utilização de relacionamentos entre tabelas
+- Organização e modelagem dos dados para análise
+- Criação de medidas utilizando DAX
+- Utilização de funções e cálculos para análise de indicadores
+- Criação de indicadores de faturamento, quantidade, médias e outros resultados
+- Construção de análises temporais
+- Utilização de hierarquia de datas
+- Criação de gráficos e diferentes tipos de visualizações
+- Utilização de linha de tendência
+- Criação de previsões (Forecast)
+- Utilização de intervalo de confiança em previsões
+- Construção e organização de dashboards
+- Desenvolvimento de visualizações voltadas à análise e interpretação dos dados
 
-O projeto teve como objetivo aprofundar a prática com Power BI, trabalhando não apenas com a construção do dashboard, mas também com a organização dos dados, relacionamentos entre tabelas, medidas e recursos de análise.
+---
 
-**Conceitos praticados:**
+## SQL Server
 
-* Importação de dados a partir de arquivo Excel
-* Tratamento e organização dos dados
-* Combinação de dados utilizando Inner Join e Left Join
-* Construção e utilização de relacionamentos entre tabelas
-* Criação de medidas para análise dos dados
-* Criação de indicadores, como faturamento, quantidade de clientes e médias
-* Utilização de hierarquia de datas para análise temporal
-* Criação de gráficos e visualizações
-* Utilização de linha de tendência
-* Criação de previsão de dados (Forecast)
-* Utilização de intervalo de confiança de 95% na previsão
-* Construção e organização de dashboards
+Durante os estudos, pratiquei:
+
+- Consultas utilizando `SELECT`
+- Filtros com `WHERE`
+- Ordenação com `ORDER BY`
+- Condições utilizando `AND` e `OR`
+- Utilização de `CASE`
+- Funções de agregação
+- Agrupamento de dados
+- Subconsultas
+- CTEs
+- Funções de janela
+- Criação e manipulação de tabelas
+- `SELECT INTO`
+- Criação e alteração de objetos no banco de dados
+- Procedures
+- Parâmetros em Procedures
+- Estruturas condicionais com `IF`, `ELSE` e `IF EXISTS`
+- Utilização de `DATEPART` para análises de datas e horários
+- Transações utilizando `BEGIN TRAN`, `COMMIT` e `ROLLBACK`
+- Importação e manipulação de dados em formato JSON
+- Utilização de `OPENROWSET` e `OPENJSON`
+- Inserção de dados em tabelas a partir de arquivos JSON
+- Conceitos de integridade e organização de bancos de dados
 
 ---
 
 ## Tecnologias
 
-* Power BI
-* Power Query
-* DAX
-* SQL
-* SQL Server
-* Git/GitHub
+- Power BI
+- Power Query
+- DAX
+- SQL
+- SQL Server
+- T-SQL
+- Git
+- GitHub
+
+---
 
 ## Objetivo do Repositório
 
-Meu objetivo é utilizar este espaço para **registrar minha evolução técnica**, praticar conceitos de Dados e construir projetos que demonstrem, de forma progressiva, minha capacidade de trabalhar com dados e **resolver problemas por meio da tecnologia**.
+Este repositório tem como objetivo registrar minha evolução técnica, praticar conceitos relacionados à área de Dados e documentar projetos desenvolvidos durante minha formação.
 
-Este repositório será atualizado continuamente conforme novas habilidades forem adquiridas e novos projetos forem desenvolvidos.
+Busco desenvolver, de forma progressiva, conhecimentos em análise de dados, bancos de dados, visualização e tratamento de informações, utilizando tecnologia para transformar dados em informações úteis para tomada de decisão.
+
+O repositório será atualizado continuamente conforme novas habilidades forem adquiridas e novos projetos forem desenvolvidos.
+
+---
 
 ## Contato
 
-📧 **E-mail:**[joao.lucas.devsql@gmail.com]
-💼 **LinkedIn:**[www.linkedin.com/in/joao-lucas-devsql]
+📧 **E-mail:** joao.lucas.devsql@gmail.com
+
+💼 **LinkedIn:** www.linkedin.com/in/joao-lucas-devsql
