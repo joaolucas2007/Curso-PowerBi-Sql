@@ -66,3 +66,45 @@ As
 Go
 Exec ListarTransacoesCliente @Cliente = 'Cliente 2' --Colocamos o parametro que queremos para o select
 Go
+
+--Criando procedure com 2 parametros
+
+
+Create Procedure ClienteSituacao
+@Cliente VarChar(20),
+@Situacao VarChar(20) As
+	Begin
+		Select TipoTransacao, ValorTransacao, Cliente, Aprovado
+		From BaseFraudes
+		Where Cliente = @Cliente --sera selecionado o valor que colocarmos na variavel
+		And 
+		Aprovado = @Situacao
+	End
+Go
+Exec ClienteSituacao @Cliente = 'Cliente 3' , @Situacao = 'Sim' --Colocamos o parametro que queremos para o select
+Go
+
+-- Alterando procedure
+Alter Procedure ClienteSituacao
+ @Cliente VarChar(20),
+@Situacao VarChar(20) As
+	Begin      --Adicionando data transação no select
+		Select DataTransacao, TipoTransacao, ValorTransacao, Cliente, Aprovado
+		From BaseFraudes
+		Where Cliente = @Cliente --sera selecionado o valor que colocarmos na variavel
+		And 
+		Aprovado = @Situacao
+	End
+Go
+
+--Criando proxima procedure
+Create Procedure BuscaTransacoes
+@Cliente VarChar(20),
+@Ano Int As
+	Begin 
+		Select * From BaseFraudes
+	Where Year(DataTransacao) = @Ano And
+			Cliente = @Cliente
+	End
+Go
+Exec BuscaTransacoes @Cliente = 'Cliente 2', @Ano = 2023 -- Aqui passamos o cliente e o ano que queremos
