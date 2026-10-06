@@ -52,3 +52,17 @@ Create Procedure SelecionarTodasTransacoes As
 --Executando a procedure
 
 Exec SelecionarTodasTransacoes
+
+--Criando procedure com variaveis
+
+Create Procedure ListarTransacoesCliente
+@Cliente VarChar(20)
+As
+	Begin
+		Select TipoTransacao, ValorTransacao, Cliente, Aprovado
+		From BaseFraudes
+		Where Cliente = @Cliente --sera selecionado o valor que colocarmos na variavel
+	End
+Go
+Exec ListarTransacoesCliente @Cliente = 'Cliente 2' --Colocamos o parametro que queremos para o select
+Go
