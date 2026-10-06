@@ -33,3 +33,22 @@ Go
 
 --Puxando os dados para validação
 Select * From BaseFraudes
+
+--Criando procedure
+--Vantagem procedure
+--Reutilizavel
+--Padronização
+--melhora a  performance
+--segurança no controle
+
+
+--Primeira procedure
+
+
+Create Procedure SelecionarTodasTransacoes As
+	Begin --Inicio
+		Select * From BaseFraudes
+	End --Fim
+--Executando a procedure
+
+Exec SelecionarTodasTransacoes
