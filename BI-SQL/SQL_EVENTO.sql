@@ -161,8 +161,15 @@ Go
 Select TotalEvento From ContandoEventos
 Go
 
---Craindo view para mostrar o total de participantes
+--Criando view para mostrar o total de participantes
 Create View TotalParticipantes As (
+Select Sum(TotalParticipante) As TotalParticipante From Eventos)
+Go
+
+--Usando a view
+Select TotalParticipante From TotalParticipantes
+Go
+
 
 --Criando uma view de media de faturamento
 Create view MediaFaturamento As (
@@ -171,3 +178,6 @@ Go
 
 --Usando a view
 Select MediaFatura From MediaFaturamento
+Go
+
+
