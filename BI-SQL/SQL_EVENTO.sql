@@ -131,8 +131,43 @@ Go
 Select Categoria, TotalCategoria From TotalPagoCategoria
 Go
 
-
+Create View TodosDados As (
 Select DataEvento,IdEmpresa,TipoEvento,Pagamentos,TotalParticipante, Cobertura, 
     CoordenadorResponsavel,ValorFaturaDia, RoyaltiesHolding,
         DescontoContratante, Contratante, Categoria
-From Eventos
+From Eventos)
+Go
+
+--Usando a View
+Select DataEvento,IdEmpresa,TipoEvento,Pagamentos,TotalParticipante, Cobertura, 
+    CoordenadorResponsavel,ValorFaturaDia, RoyaltiesHolding,
+        DescontoContratante, Contratante, Categoria From TodosDados
+Go
+
+
+--Somando Total de faturamento
+Create View TotalFaturamento As (
+Select Sum(ValorFaturaDia) As TotalFatura From Eventos)
+Go
+--Selecionando dados a view
+Select TotalFatura From TotalFaturamento
+Go
+--Criando Consulta de count para ver quantos eventos foram realizados
+Create View ContandoEventos As (
+Select Count(TipoEvento) As TotalEvento From Eventos)
+Go
+
+--Selecionando os dados da view
+Select TotalEvento From ContandoEventos
+Go
+
+--Craindo view para mostrar o total de participantes
+Create View TotalParticipantes As (
+
+--Criando uma view de media de faturamento
+Create view MediaFaturamento As (
+Select Avg(ValorFaturaDia) As MediaFatura From Eventos)
+Go
+
+--Usando a view
+Select MediaFatura From MediaFaturamento
